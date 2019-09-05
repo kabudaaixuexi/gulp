@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的购物车</title>
+    <link rel="stylesheet" href="../css/upcom2.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/cart.js"></script>
+    
+</head>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    FONT-SIZE: 12px;
+    COLOR: #666;
+}
+img{
+    display: block;
+    border: none;
+}
+li{
+    list-style: none;
+}
+a{
+    COLOR: #666;
+    text-decoration: none;
+}
+.topHeaderWrap {
+    width: 100%;
+    height: 27px;
+    background: #f6f6f6;
+}
+.topHeader {
+    width: 1000px;
+    height: 27px;
+    line-height: 27px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 104;
+}
+.topCollect {
+    float: left;
+    height: 27px;
+    position: relative;
+    z-index: 100;
+    width: 400px;
+    overflow: hidden;
+}
+.topRight {
+    float: right;
+    height: 27px;
+    position: relative;
+}
+.topCollect ul li {
+    float: left;
+    margin-right: 5px;
+}
+.topRight li {
+    float: left;
+    height: 27px;
+    position: relative;
+    z-index: 9998;
+}
+.topRight li i {
+    background: #cfcfcf;
+    width: 1px;
+    font-size: 0;
+    height: 12px;
+    display: inline-block;
+    float: left;
+    margin: 8px 5px 0;
+}
+.topRight li a {
+    padding: 0 3px;
+    float: left;
+}
+.topRight .hotTel {
+    padding-left: 5px;
+}
+.topRight li span {
+    float: left;
+}
+.topRight .hotTel strong {
+    color: #ca1926;
+    font-style: italic;
+    font-size: 16px;
+    position: relative;
+    top: 2px;
+    padding-left: 5px;
+}
+
+
+.midHeader {
+    background: #fff;
+    height: 90px;
+    width: 100%;
+}
+.midHeaderBox {
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+    width: 1000px;
+    z-index: 102;
+}
+.jxwLogo {
+    float: left;
+    height: 63px;
+    margin-top: 20px;
+    width: 257px;
+}
+.bayProcess {
+    float: right;
+    margin-top: 25px;
+}
+.jxwLogo .jxwIndex {
+    float: left;
+    width: 140px;
+}
+.jxwLogo .jxwIndex a {
+    display: block;
+    height: 63px;
+    width: 140px;
+}
+
+.bayProcess .proPic {
+    width: 396px;
+    height: 27px;
+    background: url(../img/ch_icon.png) no-repeat;
+    margin: 0 26px 0 16px;
+}
+.bayProcess .proTex {
+    width: 438px;
+    height: 16px;
+    line-height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 8px;
+}
+.bayProcess .proTex .on {
+    color: #666;
+}
+.bayProcess .proTex span {
+    margin-right: 117px;
+}
+.centerSec{
+    width: 100%;
+}
+.centerSec tr{
+    border-bottom: 1px solid saddlebrown;
+}
+.gwclimg{
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin-left: 20px;
+}
+.cart-th-item-info{
+    width: 250px;
+    margin: 0 auto;
+    padding-top: 40px
+}
+.cart-th-item-sku{
+    width: 372px;
+}
+.cart-th-item-price{
+    width: 300px;
+    text-align: left;
+    padding-left: 60px;
+}
+.cart-th-number{
+    width: 229px;
+}
+.jian{
+    outline: none;
+    width: 20px;
+    border: 1px #ccc solid;
+    color: #999;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 1px 1px 1px saddlebrown;
+}
+.inp{
+    width: 50px;
+}
+.jia{
+    outline: none;
+    width: 20px;
+    border: 1px #ccc solid;
+    color: #999;
+    text-align: center;
+    vertical-align: top;
+    box-shadow: 1px 1px 1px saddlebrown;
+}
+.cart-th-number{
+text-align: left
+}
+.cart-th-ops{
+    width: 73px;
+}
+.del{
+    border: none;
+    border-bottom: 1px solid lightseagreen;
+    outline: none;
+}
+</style>
+<body>
+    <div class="topHeaderWrap">
+        <div class="topHeader">
+            <div class="topCollect">
+                <ul>
+                    <li name="_login_status_panel"><div class="topLoginBox"><span><a href="javascript:;" class="loginNow">Hi 请登录</a><a style="padding:0 3px" href="javascript:;" class="regNow">免费注册</a></span><i></i></div></li>
+                </ul>
+            </div>
+            <div class="topRight">
+                <ul>
+                <li><a class="myOrder" target="_blank" href="#">我的订单</a><i></i></li>
+                <li><a class="userCenter" target="_blank" href="index.html">我的酒仙网</a><i></i></li>
+                <li class="hotTel"><span>客服热线</span><strong>400-617-9999</strong></li>
+                </ul>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="midHeader">
+            <div class="midHeaderBox">
+                <div class="jxwLogo"><p style="background:url(../img/logo.png) no-repeat;" class="jxwIndex"><a href="index.html"></a></p></div>
+                <div class="bayProcess">
+                    <div class="proPic"></div>
+                    <div class="proTex"><span class="on">我的购物车</span><span class="on2">确认订单信息</span><span class="on3">成功提交订单</span></div>
+                </div>
+            </div>
+            </div>
+
+<section class="secsecsec">
+
+    <div class="cart-list p20">
+        <form class="pure-form">
+            <table class="pure-table">
+                <thead id="thead">
+                    <tr>
+                        <th class="cart-th-check">
+                            <input type="checkbox" checked="checked" class="J_checkAll"> 全选
+                        </th>
+                        <th class="cart-th-item-info">商品</th>
+                        <th class="cart-th-item-sku">商品信息</th>
+                        <th class="cart-th-item-price">单价(元)</th>
+                        <th class="cart-th-number">数量</th>
+                        <th class="cart-th-subtotal">小计(元)</th>
+                        <th class="cart-th-ops">操作</th>
+                    </tr>
+                </thead>
+            
+                <tbody>
+                    
+
+
+                </tbody>
+            </table>
+
+            <article class="centerSec"></article>
+
+
+            <div class="m-pay-bar-cont view-PaybarCont">
+                <div id="pay-bar" class="view-TotalBar z-bar-fixed">
+                    <a id="pay-btn" class="cart-pay-btn fr view-ConfirmOrder" href="javascript:">确认订单</a>
+                    <span class="view-TotalBarPrice">
+                        
+                        <span class="cart-payment price mr-15 fr" op-value="totalPrice">¥<b class="u-yen-icon"></b></span>
+                    </span>
+                    <div class="cart-summary mr-15 fr view-TotalBarPromoFee">
+                        已优惠 <span class="red J_totalFee" op-value="totalFee">0.00</span> 元，<span class="J_totalFeeNotice">总计(不含运费)</span>：
+                    </div>
+                    <div class="cart-summary fr view-TotalBarNum">
+                        共有 <span class="red" op-value="totalNum">2</span> 件商品，
+                    </div>
+                   
+                </div>
+            </div>
+            <p class="minato-text view-MinatoText"></p>
+        </form>
+    </div>
+
+</section>
+
+
+
+
+
+
+        <!-- footerfooterfooterfooter -->
+<div class="footerTopBox">
+    <div class="footerTop">
+    <div class="footerContact"><i class="publicIcon"></i><b>400-617-9999</b><span>客服热线</span><span>9:00-23:00</span><span>贴心服务</span></div>
+    <div class="footerTopRight"><div class="ftRight-tit">优惠促销早知道</div><div class="ftRight-form"><input id="subscribe_email" type="text" value="" name=""><span>请输入您的邮箱地址</span><i class="publicIcon" id="subscribe_but"></i></div></div>
+    </div>
+    <div class="footerServices">
+    <ul class="clearfix">
+    <li class="servicesItme01">
+    <h3><i class="publicIcon"></i><span>新手入门</span></h3>
+    <p><a href="#" target="_blank" rel="nofollow">购物保障</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">服务协议</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">发票说明</a></p>
+    </li>
+    <li class="servicesItme02">
+    <h3><i class="publicIcon"></i><span>常见问题</span></h3>
+    <p><a href="#" target="_blank" rel="nofollow">红包使用</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">返现使用</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">兑换码</a></p>
+    </li>
+    <li class="servicesItme03">
+    <h3><i class="publicIcon"></i><span>配送说明</span></h3>
+    <p><a href="#" target="_blank" rel="nofollow">配送时间</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">配送费用</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">配送范围</a></p>
+    </li>
+    <li class="servicesItme04">
+    <h3><i class="publicIcon"></i><span>支付方式</span></h3>
+    <p><a href="#" target="_blank" rel="nofollow">货到付款</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">在线支付</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">线下支付</a></p>
+    </li>
+    <li class="servicesItme05">
+    <h3><i class="publicIcon"></i><span>售后服务</span></h3>
+    <p><a href="#" target="_blank" rel="nofollow">品质保证</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">退换货政策</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">退换货流程</a></p>
+    </li>
+    <li class="servicesItme06">
+    <h3><i class="publicIcon"></i><span>特色服务</span></h3>
+    <p><a href="#" target="_blank">会员俱乐部</a></p>
+    <p><a href="#" target="_blank" rel="nofollow">企业客户</a></p>
+    <p><a target="_blank" href="#">酒仙社区</a></p>
+    </li>
+    <li class="jxMicroblogging">
+    <div class="item sinaMb"><div class="sinaMbCom clearfix"><a href="#" target="_blank" rel="nofollow"><i class="publicIcon"></i></a><a href="#" target="_blank" rel="nofollow">酒仙新浪微博</a></div></div>
+    <div class="item weixin"><div class="weixinCon clearfix" flag="hide"><i class="publicIcon"></i><a id="jxWeixin" href="javascript:;" target="_blank" rel="nofollow">酒仙微信</a></div><div class="weixinCode" id="weixinCode"></div></div>
+    </li>
+    </ul>
+    </div>
+    </div>
+
+    <div class="footerBotBox">
+		<div class="footerBot clearfix">
+			<div class="footerBotLeft">
+				<p class="footerInfo">
+					<a href="http://help.jiuxian.com/view-0-105.htm" target="_blank" rel="nofollow">公司简介<i></i></a> <a href="http://help.jiuxian.com/view-0-106.htm" target="_blank" rel="nofollow">管理团队<i></i></a>
+					<a href="http://help.jiuxian.com/view-0-109.htm" target="_blank" rel="nofollow">媒体报道<i></i></a> <a href="http://help.jiuxian.com/view-0-110.htm" target="_blank" rel="nofollow">联系我们<i></i></a>
+					<a href="http://www.jiuxian.com/sitemap.htm" target="_blank">网站地图<i></i></a> <a href="http://www.jiuxian.com/allbrands.htm" target="_blank">品牌大全<i></i></a>
+				</p>
+				<p class="copyright">
+                    北京酒仙网络科技有限公司&nbsp;&nbsp;©&nbsp;&nbsp;酒仙网&nbsp;&nbsp;&nbsp;2011&nbsp;&nbsp;jiuxian.com&nbsp;&nbsp;All&nbsp;&nbsp;&nbsp;Rights&nbsp;Reserved&nbsp;&nbsp;&nbsp;<a href="http://www.beian.miit.gov.cn" target="_blank" rel="nofollow">京ICP备17043395号</a>&nbsp;&nbsp;&nbsp;京公网安备1101050188221
+				</p>
+				<p class="footerAddr" style="color: #999; line-height: 22px; padding-top: 5px;">
+					<span>统一社会信用代码&nbsp;&nbsp;91110302306646672B&nbsp;&nbsp;&nbsp;食品流通许可证编号&nbsp;&nbsp;JY11131010328793&nbsp;&nbsp;&nbsp;京食药网食备201910019&nbsp;&nbsp;&nbsp;</span>
+				</p>
+				<p class="footerAddr" style="color: #999; line-height: 22px; padding-bottom: 7px;">
+					<span>地址：北京市北京经济技术开发区经海五路58号院8幢4层</span>
+				</p>
+				<p class="copybot">
+                        <span id="kx_verify" style="float: left; padding-right: 6px; display: inline-block; position: relative; width: 128px; height: 47px;"><a id="kx_verify_link" href="https://ss.knet.cn/verifyseal.dll?sn=2011040600100007749&amp;a=1&amp;pa=0.5703459930996111" tabindex="-1" target="_blank" kx_type="图标式" rel="nofollow"><img src="https://rr.knet.cn/static/images/logo/cnnic.png" style="border:0; position: absolute; top: 0px; left: 0px;" w="128" h="47" width="128" height="47" oncontextmenu="return false;" alt="可信网站"></a></span>
+					<a href="http://img01.jiuxian.com/img1/nsy/icp01.jpg" target="_blank" rel="nofollow"><img src="http://misc.jiuxian.com/img/newIndexImg/copyBot03.jpg" width="128" height="47"></a>				
+				</p>
+				<p class="footerPro" style="padding: 8px 0 6px;">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+			</div>
+			<div class="footerBotCode">
+				<div class="jxPho-code">
+					<p class="codePic">
+						<img alt="手机酒仙网" src="http://misc.jiuxian.com/img/newIndexImg/jxPho-code.jpg?version=20160405" width="80" height="80">
+					</p>
+					<p class="codeText">手机酒仙网</p>
+				</div>
+				<div class="jkd-code">
+					<p class="codePic">
+						<img alt="微信公众号" src="http://misc.jiuxian.com/img/newIndexImg/jx-wxgzh.png" width="80" height="80">
+					</p>
+					<p class="codeText">微信公众号</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    
+</body>
+</html>

@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+body{
+    FONT-SIZE: 12px;
+    color: #666;
+    background: #f7f7f7;
+}
+html{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: Arial, Helvetica, sans-serif,"宋体";
+    text-align: left;
+    word-break: break-all;
+    text-overflow: ellipsis;
+}
+img{
+    display: block;
+}
+#hd_head{
+    width: 100%;
+    background: #fff;
+    height: 88px;
+    box-shadow: 1px 2px 6px #e1e1e1;
+    z-index: 1;
+    position: relative;
+}
+#hd{
+    width: 1000px;
+    height: 88px;
+    margin: 0 auto;
+}
+.logo{
+    float: left;
+    height: 63px;
+    margin-top: 15px;
+    width: 257px;
+}
+.logo p{
+    width:140px;
+    float: left;
+    background:url(../img/logo.png) no-repeat;
+}
+.head_nav{
+    width: 82px;
+    height: 14px;
+    line-height: 14px;
+    float: right;
+    display: inline;
+    margin: 48px 0 0 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 10;
+}.head_nav_h span{
+    padding-left: 10px;
+                float: left;
+                display: inline-block;
+                color: #666;
+                margin-right: 6px;}
+.head_nav_h{
+    height: 14px;
+    position: relative;
+    z-index: 2;
+}
+.head_nav_m{
+    float: left;
+    display: inline-block;
+    width: 15px;
+    height: 14px;
+    background:url(../img/icon_01.png) no-repeat -2px -1px;
+}
+.reg{
+    float: right;
+    color: #999;
+    margin-top: 48px;
+    height: 14px;
+    line-height: 14px;
+}.reg a,.reg a:hover{    color: #0066cc;
+                         text-decoration: none;
+                         margin-left: 20px;}
+#pop ul{
+    display: none;
+}
+#pop li{
+    list-style: none;
+    border-top: 1px dotted #ccc;
+    padding-left: 10px;
+    height: 24px;
+    line-height: 24px;
+    background: #fff;
+}#pop li a{  text-decoration: none;      color: #ccc;}
+
+
+
+
+/*底部*/
+.jx-foot {
+    width: 1000px;
+    margin: 50px auto;
+    text-align: center;
+    }
+    .jx-foot p {
+    
+    line-height: 30px;
+    color: #333;
+    
+    }
+    .jx-foot .red {
+    
+    color: #ff0000;
+    
+    }

@@ -1,0 +1,128 @@
+
+form {
+    margin: 0;
+}
+form {
+    display: block;
+    margin-top: 0em;
+}
+body {
+    font: 12px/1.5 'Helvetica Neue',Helvetica,Arial,Sans-serif;
+    background: #F2F4F6;
+}
+.cart-list {
+    padding: 20px 20px 20px;
+    position: relative;
+}
+
+.p20 {
+    padding: 20px;
+}
+.cart-list .pure-table {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+.pure-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid #cbcbcb;
+}
+.m-pay-bar-cont {
+    margin-top: 15px;
+    width: 963px;
+    height: 60px;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.cart-list .pure-table thead {
+    background: #f3f3f3;
+    color: #555;
+}
+
+.pure-table thead {
+    background: #e0e0e0;
+    color: #000;
+    text-align: left;
+    vertical-align: bottom;
+}
+.pure-table td, .pure-table th {
+    border-left: 1px solid #cbcbcb;
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible;
+    padding: 6px 12px;
+}
+.cart-th-check {
+    width: 60px;
+    text-align: center;
+}
+.cart-th-subtotal {
+    width: 100px;
+    text-align: right;
+}
+.cart-th-ops {
+    width: 50px;
+}
+
+
+
+
+
+.m-pay-bar-cont {
+    margin-top: 15px;
+    width: 963px;
+    height: 60px;
+}
+#pay-bar {
+    background: #f3f3f3;
+    padding: 0 0 0 25px;
+    position: relative;
+    margin-top: 15px;
+    *zoom: 1;
+    border: 1px solid #eee;
+}
+#pay-btn {
+    font-size: 14px;
+    background: #FF5482;
+    border-radius: 5px;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    margin: 10px 15px 0;
+    text-align: center;
+    width: 120px;
+}
+.cart-payment {
+    font-size: 26px;
+    line-height: 60px;
+    color: #ff4975;
+}
+.mr-15 {
+    margin-right: 15px;
+}
+.price {
+    font-family: tahoma,​arial,​sans-serif;
+}
+.fr {
+    float: right;
+}
+#pay-bar>div {
+    line-height: 60px;
+}
+.u-yen-icon {
+    font-family: arial;
+    font-weight: 400;
+    margin-right: 2px;
+}
+.red, a.red {
+    color: #CA3C3C;
+}
+#thead th,#thead tr{
+    border:none;
+}

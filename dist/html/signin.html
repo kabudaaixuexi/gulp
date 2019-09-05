@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登陆</title>
+    <link rel="stylesheet" href="../css/upcom1.css">
+    <script src="../js/jquery-1.11.0.js"></script>
+    <script src="../js/signin.js"></script>
+    <style>
+    #main_bg{
+        width: 100%;
+        height: 600px;
+        background:url(https://img10.jiuxian.com/bill/2019/0821/48d2262cd3a9426a820afeadb8660434.jpg) no-repeat ;
+        padding-bottom: 50px;
+        box-sizing: border-box;
+    }
+    .main_main{
+        width: 1000px;
+        margin: 0 auto;
+    }
+    .main_main_{
+        height: 500px;
+        position: relative;
+    }
+    .main_a{
+        display: block;
+        position: absolute;
+        width: 650px;
+        height: 600px;
+        z-index: 1;
+    }
+    .main_div{
+        background-color: #fff;
+        overflow: hidden;
+        position: relative;
+        width: 350px;
+        height: 405px;
+        top: 100px;
+        left: 650px;
+    }
+
+    /*登陆*/
+    .jx-ewmLoginLink {
+    display: block;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    cursor: pointer;
+}.jx-pcLoginLink {
+    display: block;
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    cursor: pointer;
+    display: none;
+}.loginCon {
+    width: 270px;
+    margin-left: 40px;
+}                       .loginCon .loginTit {
+                                                margin: 14px 0 19px;
+                                                height: 40px;
+                                                overflow: hidden;
+                                                line-height: 40px;
+                                                border-bottom: 1px solid #e9e9e9;
+                                            }
+                        .loginType {
+                                    height: 267px;
+                                    border-bottom: 1px dotted #ccc;
+                                    overflow: hidden;
+                                    }
+                                    .loginTit a.on {
+                                        color: #e4393c;
+                                        font-weight: bold;
+                                    }
+.loginTit a {
+    float: left;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    color: #999;
+    font-size: 16px;
+}.loginTit span {
+    float: left;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    font-size: 12px;
+    color: #999;
+    padding: 0 18px;
+}.Frame {
+    width: 270px;
+    height: 42px !important;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+}.Frame .filter {
+    width: 43px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}.Frame .filter .userIconBox {
+    display: inline-block;
+    width: 43px;
+    height: 40px;
+    background: #f3f3f3;
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    z-index: 3;
+    border-right: 1px solid #dcdcdc;
+}.Frame .filter .userIcon {
+    width: 20px;
+    height: 20px;
+    background-position: -51px 0;
+    margin: 10px 10px 0 11px;
+}
+.Frame .filter i {
+    float: left;
+    *display: inline;
+    *zoom: 1;
+}
+.jx-wrap i {
+    background: url(./img/reg/regLogin-8.png) no-repeat 0 0;
+        background-position-x: 0px;
+        background-position-y: 0px;
+
+}.enterFrame .text {
+    height: 40px;
+    width: 173px;
+    padding: 0 45px 0 50px;
+}
+.judge{
+    display: none;
+    position: absolute;
+    left: 246px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
+    background: url(../img/login.png) no-repeat;
+    background-position: -162px 0;
+}
+/*点击显示，失去焦点消失*/
+.judgeDel1{
+    background: url(../img/login.png) no-repeat;
+    float: left;
+    display: none ;
+    width: 16px;
+    height: 16px;
+    *display: inline;
+    *zoom: 1;
+    background-position: -486px -42px;
+    cursor: pointer;
+    position: absolute;
+    top: 14px;
+    left: 248px;
+    z-index: 5;
+}
+.judgeDel2{
+    background: url(../img/login.png) no-repeat;
+    float: left;
+    display: none ;
+    width: 16px;
+    height: 16px;
+    *display: inline;
+    *zoom: 1;
+    background-position: -486px -42px;
+    cursor: pointer;
+    position: absolute;
+    top: 14px;
+    left: 248px;
+    z-index: 5;
+}
+.userIcon{
+    background: url(../img/login.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    background-position: -51px 0;
+    margin: 10px 10px 0 11px;
+    float: left;
+    display: inline-block;
+}
+.pwdIcon{
+    background: url(../img/login.png) no-repeat;
+    width: 16px;
+    height: 22px;
+    background-position: -83px 0;
+    margin: 10px 10px 0 11px;
+    float: left;
+    display: inline-block;
+}
+.yzIcon{
+    background: url(../img/login.png) no-repeat;
+    background-position: -426px 0;
+    height: 24px;
+    width: 18px;
+    position: absolute;
+    left: 12px;
+    top: 9px;
+}
+/*input 输入框*/
+input::-webkit-input-placeholder{
+    color: #ccc;
+    font-size: 16px;
+    font-weight: normal
+        }
+        input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+            color: #ccc;
+    font-size: 16px;
+    font-weight: normal
+        }
+        input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+            color: #ccc;
+    font-size: 16px;
+    font-weight: normal
+        }
+        input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+            color: #ccc;
+    font-size: 16px;
+    font-weight: normal
+        }
+.Frame .text {
+    outline: none;
+    border: 1px solid #eee;
+    width: 172px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    background: none;
+    font-weight: 700;
+}
+.jx-wrap input {
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+}
+input, select {
+    vertical-align: middle;
+}.loginCon .loginBtn {
+    margin-bottom: 11px;
+}.loginBtn input {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16;
+    width: 270px;
+    background-color: #e10303;
+    color: #fff;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    font-family: "Microsoft Yahei";
+}
+.loginCon .moreChoice {
+    margin-bottom: 16px;
+}.forgetPwd {
+    color: #999;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}.moreChoice .forgetPwd {
+    float: right;
+}.moreChoice .freeReg {
+    color: #0066cc;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    float: right;
+    padding-left: 13px;
+}.moreChoice .auto {
+    float: left;
+}.yzFrame .text {
+    padding-left: 50px;
+    width: 84px;
+    padding-right: 54px;
+    border-right: none;
+}
+.cooperate p{
+    float: left;
+    margin: 22px 15px 0 0;
+}
+.cooperateWay {
+    margin: 0 auto;
+    float: left;
+    margin: 15px 0 0 0;
+}
+.cooperateWay .qq i {
+    background-position: 0 -35px;
+    margin-left: 0;
+}
+.cooperateWay  a{
+    display: block;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+.qq{
+    background: url(../img/login.png) no-repeat;
+    background-position: 0 -35px;
+}.qq:hover{background-position: 0 -86px;}
+.sina{
+    margin-left: 12px;
+    background: url(../img/login.png) no-repeat;
+    background-position: -51px -35px;
+}.sina:hover{background-position: -51px -86px;}
+.aliPay{
+    margin-left: 12px;
+    background: url(../img/login.png) no-repeat;
+    background-position: -102px -35px;
+}.aliPay:hover{background-position: -102px -86px;}
+.baidu{
+    margin-left: 12px;
+    background: url(../img/login.png) no-repeat;
+    background-position: -153px -35px;
+}.baidu:hover{background-position: -153px -86px;}
+/* input提示 */
+.mistakeTip, .mistakeTip02 {
+    background: #ed787f;
+    padding: 0 10px;
+    height: 20px;
+    color: #fff;
+    line-height: 20px;
+    position: absolute;
+    bottom: -15px;
+    right: 0;
+    z-index: 5;
+    display: none;
+}
+/*验证码*/
+#refreshi{
+    width: 100px;
+    height: 40px;
+    line-height:40px; 
+    text-align: center;
+    display: inline-block;
+    float: right;
+    z-index: 4;
+    font-size: 20px;
+    border: 1px solid #eee;
+    border-left: none;
+}
+/*动态验证验证码*/
+#refreshi_2{
+    width: 100px;
+    height: 40px;
+    line-height:40px; 
+    text-align: center;
+    display: inline-block;
+    float: right;
+    z-index: 4;
+    font-size: 20px;
+    border: 1px solid #eee;
+    border-left: none;
+}
+.jx-wrap i {
+    width: 30px;
+    height: 30px;
+    background: url(./img/reg/regLogin-8.png) no-repeat 0 0;
+        background-position-x: 0px;
+        background-position-y: 0px;
+}
+
+.ewmCon {
+    width: 270px;
+    margin-left: 40px;
+}
+
+
+
+/* 手机动态验证 */
+/*默认隐藏*/
+#m2{display: none;}
+.yzFrame .text1 {
+    padding-left: 50px;
+    width: 54px;
+    height: 40px;
+    padding-right: 44px;
+    border: 1px solid #eee;
+    outline: none;
+}
+#refreshi2{
+    float: right;
+    display: inline-block;
+    width: 115px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: center;
+    font-family: "微软雅黑";
+    font-weight: normal;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    cursor: pointer;
+    border-radius: 3px;
+    }
+.yzIcon2{
+    background: url(../img/login.png) no-repeat;
+    background-position: -259px 1px;
+    height: 24px;
+    width: 20px;
+    position: absolute;
+    left: 12px;
+    top: 9px;
+}
+
+
+
+/* 底部 */
+
+    </style>
+</head>
+<body>
+    <header id="hd_head">
+    <article id="hd">
+        <div class="logo">
+            <p>
+                <a href="http://www.jiuxian.com/" style="display:block;height:63px"></a>
+            </p>
+            <a>
+                <img src="../img/slogan.jpg" alt="">
+            </a>
+        </div>
+        <div class="head_nav">
+            <div id="waibao">
+            <div class="head_nav_h">
+                <span>帮助中心</span>
+                <i class="head_nav_m"></i>
+            </div>
+            <div id="pop">
+                <ul>
+                    <li><a href="">配送说明</a></li>
+                    <li><a href="">支付方式</a></li>
+                    <li><a href="">售后服务</a></li>
+                    <li><a href="">企业客户</a></li>
+                </ul>
+            </div></div>
+        </div>
+        <div class="reg">
+            欢迎来到酒仙网！
+            <a href="signup.html">免费注册</a>
+        </div>
+    </article>
+</header>
+<section id="main_bg">
+    <div class="main_main">
+    <article class="main_main_">
+        <a href="#" class="main_a"></a>
+        <div class="main_div">
+            <!-- 登陆块 -->
+                <a class="jx-ewmLoginLink"><i></i></a><a class="jx-pcLoginLink"><i></i></a>
+                <div class="loginCon">
+                    <div class="loginTit clearfix">
+                        <a href="javascript:;" class="userLogin on">帐号登录</a>
+                        <span>|</span>
+                        <a href="javascript:;" class="mobileLogin">手机动态密码登录</a>	                        
+                    </div>
+                    <div id="m1" class="loginType loginUsual">
+                        <div class="Frame enterFrame">
+                            <div class="filter">
+                                <em class="userIconBox"><i class="userIcon"></i></em>
+                                <i class="judge"></i>
+                                <i class="judgeDel1"></i>
+                            </div>
+                            <input id="userName" class="text" type="text" name="uname" autocomplete="off" value="" placeholder="用户名/邮箱/手机号">
+                            <div class="mistakeTip">请输入用户名/邮箱/手机号</div>
+                        </div>
+                        <div class="Frame enterFrame">
+                            <div class="filter">
+                                <em class="userIconBox"><i class="pwdIcon"></i></em>
+                                <i class="judge"></i>
+                                <i class="judgeDel2"></i>
+                            </div>
+                            <input maxlength="20" id="password" class="text" type="password" placeholder="密码" autocomplete="off" name="_pwd" onpaste="return false" >
+                            <input type="hidden" id="pwd" name="pwd">
+                            <div class="mistakeTip">请输入密码</div>
+
+                        </div>
+                        <div class="Frame yzFrame" id="validcaptcha">
+                            <div class="filter">
+                                <em class="userIconBox"><i class="yzIcon"></i></em>
+                            </div>
+                            <input id="verification" class="text" type="text" name="j_captcha" size="8" maxlength="5" autocomplete="off" placeholder="验证码">
+                            <a class="refresh" id="_captchaImage" href="javascript:void(0)"><i id="refreshi" onclick="createCode(4)"></i></a>
+                            <div class="mistakeTip">请输入验证码</div>
+                        </div>
+                        <div class="loginBtn">
+                            <input name="bi_Usuallogin" type="button" id="save" value="登&nbsp;&nbsp;录">
+                        </div> 
+                        <div class="moreChoice clearfix">
+                            <div class="auto">
+                                <input type="checkbox" class="check" id="auto" name="remember" value="yes">
+                                <label for="auto">自动登录</label>
+                            </div>
+                            <a class="freeReg" href="../html/signup.html">免费注册</a>
+                            <a class="forgetPwd" id="foget" href="signup.html">忘记密码</a>		
+                        </div>
+                    </div>
+                    <div id="m2" class="loginType loginMobile">
+                        <div class="Frame enterFrame enterFramePhone">
+                            <div class="filter">
+                                <em class="userIconBox"><i class="userIcon"></i></em>
+                                <i class="judge" style="display: none"></i>
+                                <i class="judgeDel1" style="display: none"></i>
+                            </div>
+                            <input id="iphone" class="text" type="text" name="phone" autocomplete="off" value="" placeholder="手机号">
+                            <div class="mistakeTip">请输入手机号</div>
+                            <div class="mistakeTip02" style="display:none">请输入正确的手机号</div>
+                        </div>
+                        <div class="Frame yzFrame" id="validcaptcha">
+                            <div class="filter">
+                                <em class="userIconBox"><i class="yzIcon"></i></em>
+                            </div>
+                            <input id="verification2" class="text" type="text" name="j_captcha" size="8" maxlength="5" autocomplete="off" placeholder="验证码">
+                            <a class="refresh" id="_captchaImage" href="javascript:void(0)"><i id="refreshi_2" onclick="createCode(4)" ></i></a>
+                            <div class="mistakeTip" style="display:none">请输入验证码</div>
+                            <div class="mistakeTip02" style="display:none">请输入验证码</div>
+                        </div>
+                        <div class="regAccInforBom clearfix">
+
+                                <div class="Frame yzFrame" id="validcaptcha">
+                                        <div class="filter">
+                                            <em class="userIconBox"><i class="yzIcon2"></i></em>
+                                        </div>
+                                        <input id="phoneverification" class="text1" type="text" name="j_captcha" size="8" maxlength="5" autocomplete="off">
+                                        <span id="refreshi2" onclick="">获取短信验证码</span>
+                                    </div>
+
+
+                        </div>
+                        <div class="loginBtn">
+                            <input name="bi_phoneDylogin" id="saveLogin" type="button" value="登&nbsp;&nbsp;录" onclick="ga('send','event','getMsgCode','button','msgLogin')">
+                        </div>
+                    </div>
+                    <div class="cooperate">
+                        <p>使用合作账号登录</p>
+                        <div class="cooperateWay clearfix">
+                            <a class="qq" href="/union/qq.htm?from=http://www.jiuxian.com/?ozs=1796708-1722"></a>
+                            <a class="sina" href="/union/sina_login.htm?from=http://www.jiuxian.com/?ozs=1796708-1722"></a>
+                            <a class="aliPay" href="/union/alipay_login.htm?from=http://www.jiuxian.com/?ozs=1796708-1722" name="fastlogin"></a>
+                            <a class="baidu" href="/union/baidu_login.htm?from=http://www.jiuxian.com/?ozs=1796708-1722"></a>
+                        </div>
+                    </div>
+                </div> 
+            
+                
+            
+
+        </div>
+    </article>
+    </div>
+
+</section>
+<footer>
+    <article class="jx-foot" style="height: px;width: 100%;padding: 10px 0 0;">
+
+        <p>© &nbsp;酒仙网&nbsp; 2011 jiuxian.com All &nbsp;Rights Reserved&nbsp;&nbsp;<a target="_blank" href="#">京ICP证110141号</a>&nbsp;&nbsp;京公网安备1101050188221</p>
+        <p class="red">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+   
+
+    </article>
+
+
+</footer>
+</body>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script>
+    //导航下拉
+$(function(){
+    $("#waibao").hover(function(){
+        $("#pop ul").show()
+        $(this).css({
+            border:"1px solid #ccc"
+        })
+    },function(){
+        $("#pop ul").hide()
+        $(this).css({
+            border:"none"
+        })
+    })
+
+
+    //input获得,失去焦点
+    $("#userName").focusin(function(){
+        $(".judgeDel1").css({
+            display:"block"
+        })
+        $(this).removeAttr("placeholder"); 
+        $(".judge").eq(0).css({
+                display:"none"
+            })
+        $(".mistakeTip").eq(0).css({
+            display:"none"
+        })
+    })
+    $("#userName").focusout(function(){
+        if($(this).val()==""){
+            $(this).attr({placeholder:"用户名/手机号/邮箱"});
+            $(".judge").eq(0).css({
+                display:"inline-block"
+            })
+            $(".mistakeTip").eq(0).css({
+            display:"block"
+            })
+             $(".judgeDel1").css({
+            display:"none"
+            })
+        }
+    })
+
+
+
+    $("#iphone").focusin(function(){
+        $("#m2").find(".judgeDel1").css({
+            display:"block"
+        })
+        $(this).removeAttr("placeholder"); 
+        $("#m2").find(".judge").eq(0).css({
+                display:"none"
+            })
+            $("#m2").find(".mistakeTip").eq(0).css({
+            display:"none"
+        })
+    })
+    $("#iphone").focusout(function(){
+        if($(this).val()==""){
+            $(this).attr({placeholder:"手机号"});
+            $("#m2").find(".judge").eq(0).css({
+                display:"inline-block"
+            })
+            $("#m2").find(".mistakeTip").eq(0).css({
+            display:"block"
+            })
+             $("#m2").find(".judgeDel1").css({
+            display:"none"
+            })
+        }
+    })
+
+
+
+    $("#verification2").focusin(function(){
+       
+       $(this).removeAttr("placeholder"); 
+       $("#m2").find(".mistakeTip").eq(1).css({
+           display:"none"
+       })
+   })
+   $("#verification2").focusout(function(){
+       if($(this).val()==""){
+           $(this).attr({placeholder:"验证码"});
+           $(".judge").eq(0).css({
+               display:"inline-block"
+           })
+           $("#m2").find(".mistakeTip").eq(1).css({
+           display:"block"
+           })
+        
+       }
+   })
+
+    $("#password").focusin(function(){
+
+        
+
+        $(".judgeDel2").css({
+            display:"block"
+        })
+        $(this).removeAttr("placeholder"); 
+        $(".judge").eq(1).css({
+                display:"none"
+            })
+            $("#m1").find(".mistakeTip").eq(1).css({
+                display:"none"
+        })
+    })
+    $("#password").focusout(function(){
+        if($(this).val()==""){
+            $(this).attr({placeholder:"密码"});
+            $(".judge").eq(1).css({
+                display:"inline-block"
+            })
+            $("#m1").find(".mistakeTip").eq(1).css({
+                display:"block"
+            })
+            $(".judgeDel2").css({
+            display:"none"
+            })
+        }
+    })
+
+    $("#verification").focusin(function(){
+        $(this).removeAttr("placeholder"); 
+        $(".mistakeTip").eq(2).css({
+            display:"none"
+        })
+    })
+    $("#verification").focusout(function(){
+        if($(this).val()==""){
+            $(this).attr({placeholder:"验证码"});
+            $(".mistakeTip").eq(2).css({
+            display:"block"
+        })
+        }
+    })
+    //input内容清除
+    $(".judgeDel1").on("click",function(){
+        $("#userName").val("");
+        $("#userName").show().focus();  
+        $("#iphone").val("");
+        $("#iphone").show().focus()
+    })
+    $(".judgeDel2").on("click",function(){
+        $("#password").val("");
+        $("#userName").show().focus();   
+    })
+    // 手机动态验证
+
+    $(".mobileLogin").on("click",function(){
+        $("#m1").css({
+            display:"none"
+        }) 
+        $("#m2").css({
+            display:"block"
+        })
+        $(this).addClass("on")
+        $(".userLogin").removeClass("on")
+    })
+    $(".userLogin").on("click",function(){
+        $(this).addClass("on")
+        $(".mobileLogin").removeClass("on")
+        $("#m2").css({
+            display:"none"
+        })
+        $("#m1").css({
+            display:"block"
+        }) 
+    })
+
+
+
+
+    /*ajax*/
+let data={name:"clasjchahcsbh;",password:"jclhsbhcbljsa"}
+
+$.ajax({
+    type:"post",
+    url:"http://47.104.244.134:8080/userlogin.do",
+    data:data,
+    success:function(data){
+        console.log(data);
+    }
+})
+})
+    
+    //随机验证码
+     window.onload=function(){
+     createCode(4); 
+    } 
+     var Btn=document.getElementById("save");
+     var Btn2=document.getElementById("saveLogin");
+     //生成验证码的方法
+    function createCode(length) {
+        var code = "";
+        var codeLength = parseInt(length); //验证码的长度
+        var checkCode = document.getElementById("refreshi");
+        var checkCode_2 = document.getElementById("refreshi_2");
+        ////所有候选组成验证码的字符，当然也可以用中文的
+        var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+        'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); 
+        //循环组成验证码的字符串
+        for (var i = 0; i < codeLength; i++)
+        {
+            //获取随机验证码下标
+            var charNum = Math.floor(Math.random() * 62);
+            //组合成指定字符验证码
+            code += codeChars[charNum];
+        }
+        if (checkCode||checkCode_2)
+        {
+            //将生成验证码赋值到显示区
+            checkCode.innerHTML = code;
+            checkCode_2.innerHTML = code;
+        }
+    }
+    
+    
+    //检查验证码是否正确
+    Btn.onclick=function()
+    {
+        //获取显示区生成的验证码
+        var checkCode = document.getElementById("refreshi").innerHTML;
+        //获取输入的验证码
+        var inputCode = document.getElementById("verification").value;
+        //console.log(checkCode);
+        //console.log(inputCode);
+        if (inputCode.length <= 0)
+        {
+            // alert("请输入验证码！");
+        }
+        else if (inputCode.toUpperCase() != checkCode.toUpperCase())
+        {
+            // alert("验证码输入有误！");
+            createCode(4);
+        }
+        else
+        {
+            // alert("验证码正确！");
+        }       
+    }
+    Btn2.onclick=function()
+    {
+        //获取显示区生成的验证码
+        var checkCode = document.getElementById("refreshi_2").innerHTML;
+        //获取输入的验证码
+        var inputCode = document.getElementById("verification2").value;
+        console.log(inputCode);
+        
+        //console.log(checkCode);
+        //console.log(inputCode);
+        if (inputCode.length <= 0)
+        {
+            // alert("请输入验证码！");
+        }
+        else if (inputCode.toUpperCase() != checkCode.toUpperCase())
+        {
+            // alert("验证码输入有误！");
+            createCode(4);
+        }
+        else
+        {
+            // alert("验证码正确！");
+        }   
+
+
+
+
+        
+
+    }
+    
+
+</script>
+
+
+</html>

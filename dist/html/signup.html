@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/upcom1.css">
+    <script src="../js/jquery-1.11.0.min.js"></script>
+    <script src="../js/signup.js"></script>
+    <title>注册</title>
+    <style>
+    .jx-main-bg.regBg {
+    background: url(../img/bg.jpg) repeat-x scroll left top;
+    padding-top: 70px;
+}
+.jx-main-bg {
+    width: 100%;
+    padding: 0 0 50px;
+    height: 600px;
+}
+.jx-main {
+    width: 1000px;
+    margin: 0 auto;
+}
+.jx-content {
+    background: #fff;
+    border: 3px solid #eaeaea;
+    border-radius: 5px;
+    box-shadow: 1px 6px 11px #e4e4e4;
+    height: 500px;
+    position: relative;
+}
+.jx-regTitBox {
+    width: 280px;
+    height: 34px;
+    position: absolute;
+    right: 15px;
+    top: -37px;
+}
+.regConWrap {
+    height: 500px;
+    width: 994px;
+    overflow: hidden;
+    position: relative;
+}
+.regConWrap ul {
+    height: 450px;
+    width: 2000px;
+}
+.regConWrap ul li.add {
+    width: 784px;
+    padding: 35px 0 0 125px;
+    float: left;
+}
+.regAccInfor {
+    margin-top: 15px;
+}
+.regLabel {
+    width: 230px;
+    height: 42px;
+    line-height: 78px;
+    text-align: right;
+    font-size: 16px;
+    padding-right: 30px;
+    float: left;
+}
+.checkButBox {
+    width: 148px;
+    height: 42px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+.checkButBox .regCheckBut {
+    display: inline-block;
+    width: 146px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-align: center;
+    font-family: "微软雅黑";
+    font-weight: normal;
+    border: 1px solid #ccc;
+    background-color: #eaeaea;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.regInputBox {
+    height: 42px;
+    width: 302px;
+    float: left;
+    position: relative;
+    
+}
+.regAccInfor .regInput {
+    height: 42px;
+    width: 255px;
+    padding-left: 45px;
+    background: none;
+    position: relative;
+    z-index: 3;
+    font-weight: 700;
+}
+.jx-main input {
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    border: 1px solid #dcdcdc;
+    font-size: 16px;
+}
+.jx-main input.on {
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    border: 1px solid #ff6666;
+    font-size: 16px;
+}
+input, select {
+    vertical-align: middle;
+}
+/*icon*/
+.regInputBox{
+    margin-top: 15px;
+}
+.regInputBox .regIcon.accName {
+    background-position: -48px 2px;
+}
+.regInputBox .regIcon.accCheck {
+    background-position: -259px 1px;
+}
+.regInputBox .regIcon.accPass {
+    background-position: -77px 2px;
+}
+.regInputBox .regIcon {
+    display: inline-block;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    left: 12px;
+    top: 9px;
+}
+.regAccInfor .regInputChe {
+    width:255px;
+    padding-left: 45px;
+    background: none;
+    position: relative;
+    z-index: 3;
+    font-weight: 700;
+}
+.jx-main i {
+    background: url(../img/login.png) no-repeat 0 0;
+}
+
+.ccc{
+    height: 60px;
+    width: 50px;
+    margin-left: 270px;
+    margin-top: 20px;
+}
+
+.regInputBox .regPointIcon.regFalse {
+    background-position: -162px 0;
+}
+
+.regInputBox .regPointIcon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    z-index: 4;
+}
+.regInputBox .regPoint.poiFalse {
+    background: #ed787f;
+}
+.regInputBox .regPoint.poiTrue {
+    background: #ccc;
+}
+/*foot*/
+.regAccBut {
+    margin: 8px 0 0 260px;
+}
+.regAccInfor .regCheck {
+    width: 148px;
+    height: 42px;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.regAgreeBox {
+    line-height: 22px;
+    width: 302px;
+    position: relative;
+}
+.regAgreeBox .regAgrInput {
+    height: auto;
+    border: none;
+}
+.regAgreeBox .regAgree {
+    display: inline-block;
+    color: #999;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-bottom: 9px;
+}
+.regInputBox .regSub {
+    width: 302px;
+    height: 42px;
+    font-size: 18px;
+    font-family: "微软雅黑";
+    color: #fff;
+    border-radius: 2px;
+    border: none;
+    background: #e10303;
+    cursor: pointer;
+}
+/*提示*/
+.regInputBox .regPoint {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    padding: 0 8px;
+    position: absolute;
+    top: 37px;
+    right: 0px;
+    z-index: 5;
+}
+    </style>
+</head>
+<body>
+    <header id="hd_head">
+        <article id="hd">
+            <div class="logo">
+                <p>
+                    <a href="http://www.jiuxian.com/" style="display:block;height:63px"></a>
+                </p>
+                <a>
+                    <img src="../img/slogan.jpg" alt="">
+                </a>
+            </div>
+            <div class="head_nav">
+                <div id="waibao">
+                <div class="head_nav_h">
+                    <span>帮助中心</span>
+                    <i class="head_nav_m"></i>
+                </div>
+                <div id="pop">
+                    <ul>
+                        <li><a href="">配送说明</a></li>
+                        <li><a href="">支付方式</a></li>
+                        <li><a href="">售后服务</a></li>
+                        <li><a href="">企业客户</a></li>
+                    </ul>
+                </div></div>
+            </div>
+            <div class="reg">
+                欢迎来到酒仙网！
+                <a href="signin.html">请登录</a>
+            </div>
+        </article>
+    </header>
+
+<section class="jx-main-bg regBg">
+    <article class="jx-main">
+        <div class="jx-content">
+            <nav class="jx-regBox">
+                <div class="regConWrap">
+                    <ul class="clearfix">
+                        <form action="">
+                            <li class="regCon add">
+                                <div class="regAccInfor clearfix">
+                                    <div class="regLabel">用户名</div>
+                                    <div class="regInputBox">
+                                    <input class="regInput userAccountNameByPhone" type="text" id="phone" name="uname" autocomplete="off" maxlength="16">
+                                    <i class="regIcon accName"></i>
+                                    <i class="regPointIcon regFalse" style="display:none;"></i>
+                                    <span class="regPoint poiFalse" style="display:none;">请输入用户名</span>
+                                    <span class="regPoint poiTrue" style="display:none;">请输入用户名</span>
+                                </div>
+                                </div>
+
+                            <div class="ccc">
+                                
+                                            <input id="man" type="radio" checked="checked" name="sex" />男<input id="woman" type="radio"  name="sex"/>女
+                            </div>
+
+                                <div class="regAccInfor clearfix">
+                                    <div class="regLabel">邮箱</div>
+                                    <div class="regInputBox">
+                                    <input class="regInput userAccountNameByPhone" type="text" id="phoneEmail" name="uname" autocomplete="off" maxlength="20">
+                                    <i class="regIcon accName"></i>
+                                    <i class="regPointIcon regFalse" style="display:none;"></i>
+                                    <span class="regPoint poiFalse" style="display:none;">请输入邮箱</span>
+                                    <span class="regPoint poiTrue" style="display:none;">请输入正确邮箱</span>
+                                </div>
+                                </div>
+                                <div class="regAccInfor clearfix">
+                                    <div class="regLabel">手机号</div>
+                                    <div class="regInputBox">
+                                    <div class="checkButBox">
+                                    </div>
+                                    <div class="regCheck">
+                                        <input class="regInputChe iphoneCode" id="phoneverification" type="text" name="mobileCheck" autocomplete="off" maxlength="11" size="8">
+                                        <i class="regIcon accCheck"></i>
+                                        <i class="regPointIcon regFalse" style="display:none;"></i>
+                                        <span class="regPoint poiFalse" style="display:none;">请输入手机号</span>
+                                    </div>
+                                    </div>
+                                </div>
+                                <div class="regAccInfor clearfix">
+                                    <div class="regLabel">设置密码</div>
+                                        <div class="regInputBox"><input class="regInput userPassWord" type="password" id="phonePwd" maxlength="20" autocomplete="off">
+                                            <input type="hidden" id="ppwd" name="pwd">
+                                            <i class="regIcon accPass"></i>
+                                            <i class="regPointIcon regFalse" style="display:none;"></i>
+                                            <span class="regPoint poiFalse" style="display:none;">请输入密码</span>
+                                            <span class="regPoint poiTrue" style="display:none;">请输入4-10位的密码</span>
+                                        </div>
+                                    <div style="display:none;" class="strength"><b>弱</b><i class="strength1"></i><b>强</b></div>
+                                </div>
+                                <div class="regAccInfor clearfix">
+                                    <div class="regLabel">确认密码</div>
+                                        <div class="regInputBox">
+                                            <input class="regInput userPassWord2" type="password" id="phoneRePwd" maxlength="20" autocomplete="off">
+                                            <input type="hidden" id="reppwd" name="pwdtwo">
+                                            <i class="regIcon accPass"></i>
+                                            <i class="regPointIcon regFalse" style="display:none;"></i>
+                                            <span class="regPoint poiFalse" style="display:none;">两次输入密码不一致</span>
+                                        </div>
+                                </div>
+                                <div class="regAccBut clearfix">
+                                    <div class="regAgreeBox">
+                                        <input class="regAgrInput" type="checkbox" name="xieyi" checked="checked">
+                                        <span class="regAgree">我已阅读并同意<a href="http://help.jiuxian.com/view-1-112.htm" target="_blank">《酒仙网用户注册协议》</a></span>
+                                    </div>
+                                    <div class="regAgreePoint" style="display:none;" id="phone_regAgreePoint">请接受服务协议！</div>
+                                </div>
+                                <div class="regAccBut clearfix">
+                                    <div class="regInputBox"><input name="bi_phone_register" class="regSub" type="button" id="phoneSubit" value="立&nbsp;即&nbsp;注&nbsp;册"></div>
+                                </div>
+                                </li>
+                        </form>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </article>
+</section>
+
+
+    <footer>
+        <article class="jx-foot" style="height: px;width: 100%;padding: 10px 0 0;">
+    
+            <p>© &nbsp;酒仙网&nbsp; 2011 jiuxian.com All &nbsp;Rights Reserved&nbsp;&nbsp;<a target="_blank" href="#">京ICP证110141号</a>&nbsp;&nbsp;京公网安备1101050188221</p>
+            <p class="red">购买前请确认达到法定饮酒年龄！酒仙网不销售任何含酒精产品给18岁以下人士！</p>
+       
+    
+        </article>
+    
+    
+    </footer>
+</body>
+<script>
+$(function(){
+    $("#waibao").hover(function(){
+        $("#pop ul").show()
+        $(this).css({
+            border:"1px solid #ccc"
+        })
+    },function(){
+        $("#pop ul").hide()
+        $(this).css({
+            border:"none"
+        })
+    })
+
+    //表单验证
+    /*手机*/
+    $("#phone").focusin(function(){
+        $(".regFalse").eq(0).css({
+            display:"none"
+        })
+        $(".poiFalse").eq(0).css({
+            display:"none"
+        })
+        $(".poiTrue").eq(0).css({display:"block"})
+    })
+    $("#phone").focusout(function(){
+        if($(this).val()==""){
+            $(".regFalse").eq(0).css({
+                display:"block"
+            })
+            $(".poiFalse").eq(0).css({
+                display:"block"
+            })
+        }
+        $(".poiTrue").eq(0).css({display:"none"})
+    })
+    /*邮箱*/
+    $("#phoneEmail").focusin(function(){
+        $(".regFalse").eq(1).css({
+            display:"none"
+        })
+        $(".poiFalse").eq(1).css({
+            display:"none"
+        })
+        $(".poiTrue").eq(1).css({display:"block"})
+    })
+    $("#phoneEmail").focusout(function(){
+        if($(this).val()==""){
+            $(".regFalse").eq(1).css({
+                display:"block"
+            })
+            $(".poiFalse").eq(1).css({
+                display:"block"
+            })
+        }
+        $(".poiTrue").eq(1).css({display:"none"})
+    })
+    /*效验码*/
+    $("#phoneverification").focusin(function(){
+        $(".regFalse").eq(2).css({
+            display:"none"
+        })
+        $(".poiFalse").eq(2).css({
+            display:"none"
+        })
+    })
+    $("#phoneverification").focusout(function(){
+        if($(this).val()==""){
+            $(".regFalse").eq(2).css({
+                display:"block"
+            })
+            $(".poiFalse").eq(2).css({
+                display:"block"
+            })
+        }
+    })
+    /*设置密码*/
+    $("#phonePwd").focusin(function(){
+        $(".regFalse").eq(3).css({
+            display:"none"
+        })
+        $(".poiFalse").eq(3).css({
+            display:"none"
+        })
+        $(".poiTrue").eq(2).css({display:"block"})
+    })
+    $("#phonePwd").focusout(function(){
+        if($(this).val()==""){
+            $(".regFalse").eq(3).css({
+                display:"block"
+            })
+            $(".poiFalse").eq(3).css({
+                display:"block"
+            })
+        }
+        $(".poiTrue").eq(2).css({display:"none"})
+    })
+    /*验证密码*/
+    $("#phoneRePwd").focusin(function(){
+        $(".regFalse").eq(4).css({
+            display:"none"
+        })
+    })
+    $("#phoneRePwd").focusout(function(){
+        if($(this).val()!==$("#phonePwd").val()){
+            $(".regFalse").eq(4).css({
+                display:"block"
+            })
+            $(".poiFalse").eq(4).css({
+                display:"none"
+            })
+        }
+    })  
+
+
+/*ajax*/
+})
+
+</script>
+</html>

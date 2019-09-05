@@ -1,0 +1,532 @@
+
+
+/*轮播*/
+.container{
+    width: 100%;
+    height: 470px;
+    margin: 0 auto;
+    position: relative;
+}
+.container div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+}
+.container div img{
+    width: 1519px;
+    height: 470px;
+}
+/* .ul{
+    position:absolute;
+    width: 253px;
+    height: 40px;
+    left: 633px;
+    top: 725px;
+    z-index: 100;
+}
+.ul li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #000;
+    opacity: .6;
+    float: left;
+    margin-left: 10px;
+    border: 0.5px solid #fff;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+.hover{
+    background: rgb(192, 4, 4);
+    opacity: .9;
+} */
+.mav {
+    height: 470px;
+    position: absolute;
+    right: 190px;
+    top: 0;
+    width: 190px;
+    z-index: 100;
+}
+.mav a {
+    display: block;
+    height: 156px;
+    position: relative;
+    width: 190px;
+    z-index: 8;
+    margin-bottom: 1px;
+}
+/* 右侧边栏 */
+.rightSidebarBox {
+    width: 35px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    background: #ffffff;
+    box-shadow: 1px 2px 5px #999;
+}
+.rightSidebarCon {
+    width: 35px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 311;
+    text-align: center;
+    height: 365px;
+    margin-top: -182.5px;
+}
+.rightSidebarBot {
+    width: 35px;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    text-align: center;
+}
+.rightSidebarCon .rSidebarItem {
+    width: 35px;
+    position: relative;
+}
+.rSidebarItem .rsItemName {
+    width: 35px;
+    padding: 10px 0;
+    position: relative;
+    z-index: 350;
+    cursor: pointer;
+    background: none;
+}
+.rSidebarItem .rsItemName i {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+}
+.rSidebarItem .rsItemName span {
+    display: block;
+    font-family: "微软雅黑";
+    line-height: 16px;
+    padding: 2px 0 0;
+}
+.rSidebarItem .rsItemName .collect-i {
+    background-position: -40px -163px;
+}
+.rSidebarItem .rsItemName .user-i {
+    background-position: 0 -163px;
+}
+.rSidebarItem .rsItemName .online-i {
+    background-position: -45px -331px;
+}
+.rSidebarItem .rsItemName .cart-i {
+    background-position: -120px -163px;
+}
+.rSidebarItem .rsItemName .cart-n, .rSidebarItem .rsItemName .coupons-n {
+    width: 14px;
+    font-size: 14px;
+    margin: 0 10px 0 11px;
+    padding: 6px 0 4px;
+}
+
+.rightSidebarBot {
+    width: 35px;
+    position: absolute;
+    bottom: 30px;
+    right: 0;
+    text-align: center;
+}
+.rightSidebarBot .rSidebarItem {
+    width: 35px;
+    position: relative;
+    margin: 0;
+}
+.rightSidebarBot .rSidebarItem .rsItemName {
+    padding: 8px 0;
+}
+.rSidebarItem .rsItemName .feedback-i {
+    background-position: 3px -186px;
+    height: 16px;
+}
+.rSidebarItem .rsItemName .code-i {
+    background-position: -19px -186px;
+    height: 16px;
+}
+.rSidebarItem .rsItemName .backTop-i {
+    background-position: -40px -186px;
+    height: 16px;
+}
+
+.mainWrap {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+.mainBox {
+    width: 1200px;
+    margin: 0 auto;
+    background: #f9f9f9;
+    position: relative;
+}
+.bgLeft {
+    width: 100%;
+    position: absolute;
+    left: -500px;
+    top: 0;
+    height: 1000px;
+    z-index: 0;
+}
+.bgRight {
+    width: 100%;
+    position: absolute;
+    right: -500px;
+    height: 1000px;
+    top: 0;
+    z-index: 0;
+}
+/*疯狂抢购*/
+.lay_1 {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.indexTabBox, .indexTabNav {
+    width: 1200px;
+}
+.indexTabNav {
+
+    overflow: hidden;
+    height: 38px;
+    position: relative;
+}
+.indexTabConWrap {
+    border: 1px solid #ececec;
+    border-top: none;
+    overflow: hidden;
+}
+.indexTabNav li {
+    width: 235px;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
+    border-top: 2px solid #ececec;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+    color: #666;
+    font-family: "å¾®è½¯é›…é»‘";
+    background: #f9f9f9;
+}
+.indexTabNav .n1 {
+    left: 9px;
+}
+.indexTabNav .n2 {
+    left: 245px;
+}
+.indexTabNav .n3 {
+    left: 481px;
+}
+.indexTabNav .n4 {
+    left: 717px;
+}
+.indexTabNav .n5 {
+    left: 953px;
+
+}
+
+.indexTabCon {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0;
+    overflow: hidden;
+    position: relative;
+}
+.indexTabCon li {
+    float: left;
+    width: 182px;
+    margin-top: 20px;
+}
+
+
+
+
+.indexTabRight {
+    width: 270px;
+    float: right;
+    height: 500px;
+}
+
+
+
+
+
+
+
+
+
+/*烦人的弹出*/
+.newGuestsBox {
+    width: 1200px;
+    margin: 0 auto;
+    height: 140px;
+    position: relative;
+    z-index: 1;
+}
+.newGuestsLink {
+    display: block;
+    width: 1200px;
+    margin: 0 auto;
+    height: 140px;
+    position: absolute;
+    z-index: 11;
+}
+.newClose {
+    background: url(../img/newClose.png) no-repeat;
+    width: 27px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    z-index: 10;
+    right: -30px;
+    top: 8px;
+    cursor: pointer;
+}
+.newGuests {
+    width: 100%;
+    height: 140px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 299;
+}
+/*楼层悬浮*/
+.fixDiv {
+    position: fixed;
+    _display: none;
+    width: 40px;
+    height: 205px;
+    left: 50%;
+    margin-left: -550px;
+    top: 300px;
+    z-index: 0;
+    opacity: 0;
+    transform: scaleY(1.5);
+    -webkit-transform: scaleY(1.5);
+    -moz-transform: scaleY(1.5);
+    -o-transform: scaleY(1.5);
+    -ms-transform: scaleY(1.5);
+    transition: .5s transform, .5s opacity;
+    -o-transition: .5s transform, .5s opacity;
+    -moz-transition: .5s transform, .5s opacity;
+    -webkit-transition: .5s transform, .5s opacity;
+    -ms-transition: .5s transform, .5s opacity;
+}
+.fixDiv .floorOne {
+    top: 0;
+}
+.fixDiv div {
+    position: absolute;
+    left: 0;
+    font-size: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+.fixDiv .floorOneOn {
+    background: #d43d4e;
+    z-index: 1;
+    display: none;
+}
+.fixDiv a {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: "微软雅黑";
+}
+.fixDiv .floorBg {
+    background: #f1f1f1;
+    z-index: 2;
+}
+.fixDiv .floorOneBg i {
+    width: 12px;
+    height: 20px;
+    background-position: 0 -181px;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+}
+.newIndexIcon{
+    background: url(../img/newIndexIcon-24.png) no-repeat;
+}
+.fixDiv .floorTwo {
+    top: 31px;
+}
+.fixDiv .floorTwoOn {
+    background: #c2782f;
+    z-index: 1;
+    display: none;
+}
+.fixDiv .floorBg {
+    background: #f1f1f1;
+    z-index: 2;
+}
+.fixDiv .floorTwoBg i {
+    width: 8px;
+    height: 21px;
+    background-position: -18px -180px;
+    position: absolute;
+    left: 11px;
+    top: 5px;
+}
+.fixDiv .floorThree {
+    top: 62px;
+}
+.fixDiv .floorThreeOn {
+    background: #296693;
+    z-index: 1;
+    display: none;
+}
+.fixDiv .floorThreeBg i {
+    width: 20px;
+    height: 20px;
+    background-position: -31px -181px;
+    position: absolute;
+    left: 6px;
+    top: 5px;
+}
+.fixDiv .floorFour {
+    top: 93px;
+}
+.fixDiv .floorFourOn {
+    background: #6c9d0e;
+    z-index: 1;
+    display: none;
+}
+.fixDiv .floorFourBg i {
+    width: 12px;
+    height: 19px;
+    background-position: -56px -180px;
+    position: absolute;
+    left: 9px;
+    top: 5px;
+}
+.fixDiv .floorFive {
+    top: 124px;
+}
+.fixDiv .floorFiveOn {
+    background: #fe7a65;
+    z-index: 1;
+    display: none;
+}
+.fixDiv .floorFiveBg i {
+    width: 15px;
+    height: 16px;
+    background-position: -39px -213px;
+    position: absolute;
+    left: 8px;
+    top: 6px;
+}
+.fixDiv .floorBack {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+    top: 155px;
+    background: #f1f1f1;
+}
+.fixDiv .floorBack i {
+    width: 15px;
+    height: 10px;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+    background-position: -74px -190px;
+}
+
+
+/*数据*/
+.indexTabCon{
+    display: block;
+}
+.abcdefg{
+    float: left;
+    width: 235px;
+    padding-left: 37px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 20px;
+}
+.indexTabCon img{
+    width: 184px;
+    height: 210px;
+}
+.indexTabCon span{
+    display: block;
+}
+.abcdefg span:nth-child(2){
+    line-height: 20px;
+    color: #4b4645;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.abcdefg span:nth-child(3){
+    width: 60px;height: 50px;
+    position: absolute;
+    left:160px ;
+    top:155px ;
+    transform:rotate(340deg);
+    background: #f3b373;
+    color: rgb(116, 114, 103);
+    border-radius: 50%;
+    font-size: 4px;
+    text-align: center;
+    line-height: 20px;
+    padding-top: 15px;
+    opacity: .8;
+}
+.abcdefg small{
+    display: block;
+    color: #fe7a65;
+    font-size: 8px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
